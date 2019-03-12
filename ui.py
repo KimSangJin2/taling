@@ -24,10 +24,24 @@ class ui:
             elif op == "3":    
                 inputName = input()
                 self.addressor.delete(inputName)
+            #수정 기능
+            elif op == "4":
+                inputName = input()
+                changeName = input()
+                self.addressor.change(inputName, changeName)
+            #검색 기능
+            elif op == "5":
+                findwhat = input()
+                self.addressor.find(findwhat)
+            #종료 기능
+            elif op == "6":
+                print("주소록 프로그램이 종료되었습니다")
+                break
     
     #추가입력 기능
     def makePerson(self):
         inputName = input("이름:")
         inputPhone = input("번호:")
         return person(inputName, inputPhone)
+    
 
